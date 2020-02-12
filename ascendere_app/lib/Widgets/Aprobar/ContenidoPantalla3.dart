@@ -2,15 +2,13 @@ import 'package:ascendere_app/Widgets/scan_qr.dart';
 import 'package:flutter/material.dart';
 
 import '../size_config.dart';
-import 'main3.dart';
-
+import 'package:flutter/widgets.dart';
 
 class ContenidoTextoPantalla3 extends StatelessWidget{
   String docente = "Docente:";
   String texto = "Breez Will & Deep Blue";
   String descripcion = "Descripcion:";
   String lorem = "orem ipsum dolor sit.";
-
 
   ContenidoTextoPantalla3(this.texto, this.lorem);
 
@@ -153,8 +151,6 @@ class ContenidoTextoPantalla3 extends StatelessWidget{
     );
 
     return Container(
-      height: SizeConfig.blockSizeVertical*72,
-        color: Color(0xFFECEFF0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[Docente, Descripcion, fechas, Boton],

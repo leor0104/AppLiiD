@@ -36,8 +36,7 @@ class ContenidoTextoPantalla2 extends StatelessWidget {
               FlatButton(
                 child: Text('Continuar'),
                 onPressed: () {
-                  Main3();
-                  //Navigator.push(context, MaterialPageRoute(builder: (context) => Main3()),);
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => Main3()),);
                 },
               ),
             ],
