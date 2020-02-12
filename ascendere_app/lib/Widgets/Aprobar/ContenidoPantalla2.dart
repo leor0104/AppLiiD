@@ -16,6 +16,36 @@ class ContenidoTextoPantalla2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
+    Future<void> _neverSatisfied() async {
+      return showDialog<void>(
+        context: context,
+        barrierDismissible: false, // user must tap button!
+        builder: (BuildContext context) {
+          return AlertDialog(
+            title: Text('En Hora Buena'),
+            content: SingleChildScrollView(
+              child: ListBody(
+                mainAxis: Axis.vertical,
+                children: <Widget>[
+                  Text('Tu postulación ha sido registrada'),
+                  Text('Se enviará la notificación de aprobación a su correo'),
+                ],
+              ),
+            ),
+            actions: <Widget>[
+              FlatButton(
+                child: Text('Continuar'),
+                onPressed: () {
+                  Main3();
+                  //Navigator.push(context, MaterialPageRoute(builder: (context) => Main3()),);
+                },
+              ),
+            ],
+          );
+        },
+      );
+    }
+
     final fechas = Container(
       margin: EdgeInsets.only(
           left: SizeConfig.blockSizeHorizontal * 2,
@@ -91,7 +121,7 @@ class ContenidoTextoPantalla2 extends StatelessWidget {
       ),
     );
     final Docente = Container(
-      padding: EdgeInsets.all(SizeConfig.safeBlockHorizontal*5),
+      padding: EdgeInsets.all(SizeConfig.safeBlockHorizontal * 5),
       child: Row(
         children: <Widget>[
           Text(
@@ -109,7 +139,7 @@ class ContenidoTextoPantalla2 extends StatelessWidget {
     );
 
     final Descripcion = Container(
-      padding: EdgeInsets.all(SizeConfig.safeBlockHorizontal*5),
+      padding: EdgeInsets.all(SizeConfig.safeBlockHorizontal * 5),
       child: Row(
         children: <Widget>[
           Text(
@@ -126,10 +156,8 @@ class ContenidoTextoPantalla2 extends StatelessWidget {
 
     final Boton = GestureDetector(
       onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => Main3()),
-        );
+        _neverSatisfied();
+        //
       },
       child: Container(
         margin: EdgeInsets.only(top: SizeConfig.safeBlockVertical * 12),
@@ -150,14 +178,10 @@ class ContenidoTextoPantalla2 extends StatelessWidget {
         ),
       ),
     );
-
     return Container(
-        width: 415,
-        height: 450,
-        color: Color(0xFFECEFF0),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[Docente, Descripcion, fechas, Boton],
-        ));
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: <Widget>[Docente, Descripcion, fechas, Boton],
+    ));
   }
 }

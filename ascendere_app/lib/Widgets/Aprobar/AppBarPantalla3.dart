@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 class AppbarPantalla3 extends StatelessWidget{
   String titulo_interfaz2 = "Título del\nCurso";
 
