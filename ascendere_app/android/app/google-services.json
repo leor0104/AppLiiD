@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "59294948271",
+    "firebase_url": "https://ascendere-app.firebaseio.com",
+    "project_id": "ascendere-app",
+    "storage_bucket": "ascendere-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:59294948271:android:831c2347a25a4b79746d5a",
+        "android_client_info": {
+          "package_name": "ec.edu.utpl.innovaciondocente.ascendere_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "59294948271-k54rph5pmvvept283ad411bqbrtnlg62.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYpv0UDDJZ9a7_W0_6wqQ5VWzHZT3iD9M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "59294948271-k54rph5pmvvept283ad411bqbrtnlg62.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
