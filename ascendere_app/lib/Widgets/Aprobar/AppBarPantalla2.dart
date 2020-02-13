@@ -11,22 +11,24 @@ class AppbarPantalla2 extends StatelessWidget {
     SizeConfig().init(context);
     return Container(
         color: Colors.cyan,
-        height: SizeConfig.blockSizeHorizontal * 37,
+        height: SizeConfig.blockSizeHorizontal * 49,
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: <Widget>[
             Container(
-              margin: EdgeInsets.only(left: SizeConfig.safeBlockHorizontal*5,
-              bottom: SizeConfig.safeBlockHorizontal*5,),
-                child: Text(titulo_interfaz2,
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: SizeConfig.safeBlockHorizontal*7,
-                      height: SizeConfig.safeBlockVertical*0.2
-                  ),
-                ) ,),
+              margin: EdgeInsets.only(
+                left: SizeConfig.safeBlockHorizontal * 5,
+                bottom: SizeConfig.safeBlockHorizontal * 5,
+              ),
+              child: Text(
+                titulo_interfaz2,
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: SizeConfig.safeBlockHorizontal * 7,
+                    height: SizeConfig.safeBlockVertical * 0.2),
+              ),
+            ),
           ],
-        )
-    );
+        ));
   }
 }

@@ -14,9 +14,9 @@ class CursosListView extends StatelessWidget{
         padding: EdgeInsets.all(2),
         scrollDirection: Axis.horizontal,
         children: <Widget>[
-          ContainerCurso("Title Course1","21 horas","Aula 733"),
-          ContainerCurso("Title Course2","22 horas","Aula 731"),
-          ContainerCurso("Title Course3","23 horas","Aula 732"),
+          ContainerCurso("Realidad Aumentada","21 horas","Aula 733","amber"),
+          ContainerCurso("Investigación Mixta","22 horas","Aula 731","amber"),
+          ContainerCurso("Ética","23 horas","Aula 732","pink"),
         ],
       ),
     );

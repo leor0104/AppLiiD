@@ -7,16 +7,14 @@ class Pantalla2 extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
-
     return  Scaffold(
       appBar: AppBar(
-        title: Text(""),
       ),
       body: Container(
         child: Column(
           children: <Widget>[
-            AppbarPantalla2("Título del\nCurso"),
-            ContenidoTextoPantalla2("Breez Will & Deep Blue","Lorem ipsum dolor sit amet,")
+            AppbarPantalla2("Aula Inteligente\nCurso"),
+            ContenidoTextoPantalla2(" Breez Will & Deep Blue"," Lorem ipsum dolor sit amet,")
           ],
         ),
       ),

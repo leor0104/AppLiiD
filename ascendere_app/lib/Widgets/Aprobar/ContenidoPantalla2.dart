@@ -36,7 +36,10 @@ class ContenidoTextoPantalla2 extends StatelessWidget {
               FlatButton(
                 child: Text('Continuar'),
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => Main3()),);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Main3()),
+                  );
                 },
               ),
             ],
@@ -125,12 +128,16 @@ class ContenidoTextoPantalla2 extends StatelessWidget {
         children: <Widget>[
           Text(
             docente,
-            style: TextStyle(fontSize: 21.0, fontWeight: FontWeight.w400),
+            style: TextStyle(
+                fontSize: SizeConfig.safeBlockHorizontal * 5,
+                fontWeight: FontWeight.w400),
             textAlign: TextAlign.left,
           ),
           Text(
             texto,
-            style: TextStyle(fontSize: 19.0, fontWeight: FontWeight.w300),
+            style: TextStyle(
+                fontSize: SizeConfig.safeBlockHorizontal * 5,
+                fontWeight: FontWeight.w300),
             textAlign: TextAlign.right,
           )
         ],
@@ -141,13 +148,29 @@ class ContenidoTextoPantalla2 extends StatelessWidget {
       padding: EdgeInsets.all(SizeConfig.safeBlockHorizontal * 5),
       child: Row(
         children: <Widget>[
-          Text(
-            descripcion,
-            style: TextStyle(fontSize: 21.0, fontWeight: FontWeight.w400),
-          ),
-          Text(
-            lorem,
-            style: TextStyle(fontSize: 19.0, fontWeight: FontWeight.w300),
+          Container(
+            height: SizeConfig.blockSizeVertical*10,
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  descripcion,
+                  style: TextStyle(
+                      fontSize: SizeConfig.safeBlockHorizontal * 5,
+                      fontWeight: FontWeight.w400),
+                ),
+                Container(
+                  width: SizeConfig.blockSizeHorizontal*60,
+                  child: Text(
+                    lorem,
+                    style: TextStyle(
+                        fontSize: SizeConfig.safeBlockHorizontal * 5,
+                        fontWeight: FontWeight.w300),
+                  ),
+                ),
+
+              ],
+            ),
           )
         ],
       ),

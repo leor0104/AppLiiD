@@ -34,19 +34,16 @@ class ContainerBody extends StatelessWidget {
           ),
         ),
             Container(
-              child: GestureDetector(
-                onTap: null,
                 child: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(SizeConfig.blockSizeHorizontal*100),
                   ),
-                  width: SizeConfig.blockSizeHorizontal*30,
+                  width: SizeConfig.blockSizeHorizontal*40,
                   height: SizeConfig.blockSizeHorizontal*10,
                   child: 
                   DropDownWidget(),
                 ),
               ),
-        )
       ],
     );
   }

@@ -10,12 +10,12 @@ class AppbarPrincipal extends StatelessWidget {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Container(
-        color: Color(0xFF3ACCE1),
-        height: SizeConfig.blockSizeHorizontal * 40,
+        color: Colors.cyan,
+        height: SizeConfig.blockSizeHorizontal * 49,
         child: Row(
           children: <Widget>[
             Container(
-              width: SizeConfig.blockSizeHorizontal * 50,
+              width: SizeConfig.blockSizeHorizontal * 90,
               margin: EdgeInsets.only(left: SizeConfig.safeBlockHorizontal*5),
               child: Text(
                 titulo_interfaz1,

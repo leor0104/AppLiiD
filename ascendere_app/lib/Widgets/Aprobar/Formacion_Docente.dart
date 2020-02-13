@@ -42,7 +42,7 @@ class CursosHome extends StatelessWidget {
         body: Container(
           child: ListView(
             children: <Widget>[
-              AppbarPrincipal("Formación\nDocente"),
+              AppbarPrincipal("Progrma de \nFormación Docente"),
               ContainerBody("Mis Eventos ","Categoría"),
               CursosListView(),
               ContainerBody("Este mes",""),

@@ -1,10 +1,12 @@
-import 'package:ascendere_app/Widgets/card_logo.dart';
+import 'package:ascendere_app/Widgets/Aprobar/Formacion_Docente.dart';
+import 'package:wifi/wifi.dart';
+import 'package:ascendere_app/Widgets/size_config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
 import 'dart:async';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:enum_to_string/enum_to_string.dart';
-import 'package:flutter/services.dart';
+
+
+import 'Aprobar/main3.dart';
 
 
 void main() => runApp(MyApp());
@@ -27,12 +29,11 @@ class _ScanQR extends State<ScanQR> {
 
   String _value = "";
   String _lect = "";
-  String AscSVG = 'https://innovaciondocente.utpl.edu.ec/assets/images/Ascendere.svg';
 
 
   Future _lecturaQR() async {
     _lect = await FlutterBarcodeScanner.scanBarcode("#2271b3", "CANCELAR", false, ScanMode.QR);
-
+    var result =  Wifi.connection('LiiDUTPL', 'LiiD2019');
     setState(() {
       _value = _lect;
     });
@@ -43,20 +44,36 @@ class _ScanQR extends State<ScanQR> {
     return
     Scaffold(
       appBar: AppBar(
-        title: Text("Lector QR Ascendere"),
+        backgroundColor: Colors.cyan,
+        title: Text("Lector QR Ascendere",style: TextStyle(
+          fontFamily: 'Raleway',
+        )
+        ),
         actions: <Widget>[
-          IconButton(icon: Icon(Icons.exit_to_app), onPressed: null)
+          IconButton(icon: Icon(Icons.exit_to_app), onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => CursosHome()),
+            );
+          },)
         ],
       ),
       body: Center(
 
         child: Column(
-
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'El valor del QR es:',
+          children: <Widget>[Container(
+            alignment: Alignment.center,
+            margin: EdgeInsets.all(20),
+            child: Text(
+              'Ve a la puerta del aula y encontrarás un código QR, escanéalo para continuar ',
+              style: TextStyle(
+                fontFamily: 'Montserrat',
+                fontSize: SizeConfig.safeBlockHorizontal*5
+              ),
+              textAlign: TextAlign.center,
             ),
+          ),
             Text(
               _value,
               style: Theme.of(context).textTheme.display1,
@@ -67,7 +84,7 @@ class _ScanQR extends State<ScanQR> {
       floatingActionButton: FloatingActionButton(
         onPressed: _lecturaQR,
         tooltip: 'Increment',
-        child: Icon(Icons.settings_overscan),
+        child: Icon(Icons.settings_overscan,color: Colors.white,size: SizeConfig.safeBlockHorizontal *7,),
       ),
       
     );
